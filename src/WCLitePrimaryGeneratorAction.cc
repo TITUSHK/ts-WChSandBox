@@ -275,7 +275,7 @@ void WCLitePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 		
 		if(token[0]=="track"){
 
-		  if( atoi(token[1]) == 14 ){
+		  if( abs(atoi(token[1])) == 14 || abs(atoi(token[1])) == 12 ){
 		    //read in neutrino line
 		    beampdg = atoi(token[1]);
 		    beamenergy = atof(token[2])*MeV;
